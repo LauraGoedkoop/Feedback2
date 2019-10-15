@@ -1,0 +1,448 @@
+@font-face {
+    font-family: wonder;
+    src: url(../_font/wonder.ttf);
+}
+
+@font-face {
+    font-family: univers;
+    src: url(../_font/univers.ttf);
+}
+
+
+@font-face {
+    font-family: roboto;
+    src: url(../_font/Roboto-Regular.ttf);
+}
+
+
+/* basis css */
+
+*{outline: none;}
+
+body {
+    background-color: #0026cc;
+    margin: 0em;
+}
+
+header {
+    background-color: #0026cc;
+    box-shadow: inset 0 -16px 12px -10px rgba(0, 0, 0, .85);
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999;
+}
+
+ul {
+    list-style: none;
+    /* bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    justify-content: center;
+    /* bron: Max Hauser ⬇︎*/
+    overflow-x: scroll;
+    margin-top: 1em;
+    padding: 0;
+
+}
+
+.nav_detailpagina{
+  display: flex;
+  justify-content: flex-start;
+}
+
+li{
+    text-align: center;
+}
+
+a {
+    color: white;
+    margin: 1rem;
+    text-decoration: none;
+    font-family: "wonder", sans-serif;
+    font-size: 8pt;
+}
+
+/* STATES */
+
+
+a:hover {
+    color: #73cd72;
+}
+
+a:focus{
+  border: 1px dotted #fff;
+  padding: 5px;
+}
+
+a:active{
+ color:darkgreen; 
+}
+ /* button states*/
+
+ul li button:hover {
+  color: #0026cc;
+}
+
+ul li button:focus {
+  border: 1px dotted #fff;
+  padding: 5px;
+}
+
+ul li button:active {
+  color: darkgreen;
+}
+
+/*------------------------------------*/
+
+
+nav ul li a i{
+  margin-right: 1em;
+}
+
+#homeimg {
+    width: 100vw;
+    height: 40vw;
+}
+
+
+#homeicoon {
+    width: 2vw;
+    height: auto;
+
+}
+
+#banner {
+    object-fit: cover;
+    width: 100vw;
+    height: 50vh;
+}
+
+#bannervideo {
+    object-fit: cover;
+    max-height:60vh;
+    width:100%;
+    margin-bottom: -1vh;
+}
+
+.categorie_balk{
+    background:  #73cd72; 
+    /* bron: https://css-tricks.com/almanac/properties/b/box-shadow/ */
+    box-shadow: inset 0 -16px 12px -10px rgba(0, 0, 0, .85);
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    padding-left: 50px;
+    margin: 0;
+    
+}
+.categorie_balk li{
+    margin-right: 2vw;
+    margin-left: 1vw;
+    color: white;
+    font-family: "wonder", sans-serif;
+    font-size: 8pt;
+}
+
+
+.categorie_balk li button{
+    text-decoration: none;
+    color: white;
+    background-color: #73cd72;
+    border: none;
+    font-family:"wonder", sans-serif;
+}
+
+
+/* bron: Max Hauser */
+#categorie_dropdown{
+    height: 0vh;
+    width: 80vw;
+    opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    transition: 0.3s;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* bron: Les materiaal / Max Hauser voor extra hulp */
+#categorie_dropdown input[type="checkbox"]:nth-child(1){
+    position: relative;
+}
+
+#categorie_dropdown input[type="checkbox"]:nth-child(1):after{
+    position: absolute;
+    content: 'Alles';
+    opacity: 1;
+    background-color: #0026cc;
+    padding: 5px;
+    color: white;
+    font-family:"wonder", sans-serif ;
+    border: 2px solid;
+}
+
+#categorie_dropdown input[type="checkbox"]:nth-child(2):after{
+    position: absolute;
+    content: 'Muziek';
+    opacity: 1;
+    background-color: #0026cc;
+    padding: 5px;
+    color: white;
+    font-family:"wonder", sans-serif ;
+    border: 2px solid;
+}
+
+#categorie_dropdown input[type="checkbox"]:nth-child(3):after{
+    position: absolute;
+    content: 'Wetenschap';
+    opacity: 1;
+    background-color: #0026cc;
+    padding: 5px;
+    color: white;
+    font-family:"wonder", sans-serif ;
+    border: 2px solid;
+}
+
+#categorie_dropdown input[type="checkbox"]:nth-child(4):after{
+    position: absolute;
+    content: 'Comedy';
+    opacity: 1;
+    background-color: #0026cc;
+    padding: 5px;
+    color: white;
+    font-family:"wonder", sans-serif ;
+    border: 2px solid;
+}
+
+#categorie_dropdown.show{
+    opacity: 1;
+    height: 10vh;
+}
+
+
+
+main section{
+    background-image: url(../_img/background-section.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 99;
+    width: 100vw;
+    top: 360px;
+
+    
+}
+article img{
+    max-width: 100%;
+    margin-bottom: 3vh;
+}
+
+.icoon{
+    width: 8%;
+    margin-top: 3vh;
+}
+
+   .icoon_muziek{
+    width: 8%;
+    margin-left: 2vh;
+}
+
+article p{
+  font-family: "wonder", sans-serif;
+    color: white;
+    font-size: 7pt;
+    margin-bottom: 3vh;
+    margin-top: 3vh;  
+}
+
+article p a{
+  font-size: 7pt;
+  margin: 0;
+  color: #0026cc;
+}
+
+article p a:hover{
+  color:crimson;
+}
+#column {
+    /* bron: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+#column article {
+    background-color: #73cd72;
+    padding: 1em 4em;
+    margin: 2em 2em;
+    box-shadow: inset 0 0 13px 7px #000;
+    
+}
+
+article h2{
+    text-align: left;
+    font-family: "wonder", sans-serif;
+    margin-top: 1vh;  
+}
+
+
+/* detail pagina */
+
+#column2{
+     display: grid;
+    grid-template-columns: 1fr;
+}
+
+#column2 article {
+    background-color: #73cd72;
+    padding: 1em 4em;
+    margin: 2em 2em;
+    box-shadow: inset 0 0 13px 7px #000;
+  
+}
+article h3{
+  color: white;
+  font-family: "wonder", sans-serif;
+  font-size: 7pt;
+  
+}
+
+#p_detailpagina{
+  color: black;
+  font-family: "roboto";
+}
+
+iframe{
+  height: 60vh;
+  width: 100%;
+}
+
+
+
+/* FOOTER */
+
+
+
+
+
+footer{
+    background: #0026cc; 
+    padding: 3vh;
+    box-shadow: inset 0px 9px 12px -3px #000
+}
+
+#footer_socialmedia{
+    /* bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    justify-content: flex-start;
+}
+
+#footer_socialmedia li{
+    margin-left: 4vw;
+}
+
+
+
+
+/* MEDIA */
+
+
+
+
+@media (min-width: 700px){
+    #column{      
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    } 
+    #column article{
+    margin: 2em 1em;
+    }
+    
+    #column2{      
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    } 
+    #column2 article{
+    margin: 3em 10em;
+    }
+    .icoon{
+    width: 8%;
+
+}
+
+    .icoon_muziek{
+    width: 9%;
+    margin-top: 3vh;
+}
+    
+  article h2{
+    font-size: 15pt;   
+}
+  
+article h3{
+    font-size: 7pt;   
+} 
+    
+section p{
+    font-size: 8pt;
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+}
+
+    
+}
+
+@media (min-width: 1200px){
+    #column{      
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+        
+    } 
+#column article{
+    margin: 3em 6em;
+    }
+
+#column2{      
+    display: grid;
+    grid-template-columns: 1fr;
+        
+    } 
+#column2 article{
+    margin: 3em 23em;
+    }
+
+
+.icoon{
+    width: 6%;
+    margin-top: 3vh;
+}
+    
+.icoon_muziek{
+    width: 7%;
+    margin-top: 3vh;
+}
+    
+article h2{
+    font-size: 20pt;   
+}  
+  
+article h3{
+    font-size: 10pt;   
+} 
+section p{
+    font-size: 8pt;
+  
+}
+    
+    header nav ul li button{
+        display: none;
+    }    
+    
+    
+    header nav ul li a{
+        display: block !important;
+    }
+}
